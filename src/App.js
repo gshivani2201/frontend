@@ -13,6 +13,8 @@ import LoginPage from './pages/Auth/Login';
 import SignupPage from './pages/Auth/Signup';
 import './App.css';
 
+import BASE_URL from './utils/constants';
+
 class App extends Component {
   state = {
     showBackdrop: false,
@@ -71,7 +73,7 @@ class App extends Component {
         password: authData.password
        }
     }
-    fetch('http://localhost:8080/graphql', {
+    fetch('http://' + BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -134,7 +136,7 @@ class App extends Component {
         password: authData.signupForm.password.value
       }
     };
-    fetch("http://localhost:8080/graphql", {
+    fetch('http://' + BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
