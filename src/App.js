@@ -73,7 +73,7 @@ class App extends Component {
         password: authData.password
        }
     }
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -136,7 +136,7 @@ class App extends Component {
         password: authData.signupForm.password.value
       }
     };
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

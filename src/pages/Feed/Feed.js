@@ -33,7 +33,7 @@ class Feed extends Component {
         }
       `
     }
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         Authorization: "Bearer " + this.props.token,
@@ -90,7 +90,7 @@ class Feed extends Component {
         page: page
       }
     }
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         Authorization: "Bearer " + this.props.token,
@@ -138,7 +138,7 @@ class Feed extends Component {
         userStatus: this.state.status
       }
     }
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         Authorization: "Bearer " + this.props.token,
@@ -186,7 +186,7 @@ class Feed extends Component {
     if (this.state.editPost) {
       formData.append('oldPath', this.state.editPost.imagePath);
     }
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: 'PUT',
       headers: {
         Authorization: 'Bearer ' + this.props.token
@@ -243,7 +243,7 @@ class Feed extends Component {
           }
         }
 
-        return fetch('http://' + BASE_URL + '/graphql', {
+        return fetch(BASE_URL + '/graphql', {
           method: 'POST',
           body: JSON.stringify(graphqlQuery),
           headers: {
@@ -325,7 +325,7 @@ class Feed extends Component {
         }
       `
     }
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: "POST",
       headers: {
         Authorization: "Bearer " + this.props.token,

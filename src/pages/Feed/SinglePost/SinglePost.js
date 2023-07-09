@@ -33,7 +33,7 @@ class SinglePost extends Component {
         postId: postId,
       }
     };
-    fetch('http://' + BASE_URL + '/graphql', {
+    fetch(BASE_URL + '/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -51,7 +51,7 @@ class SinglePost extends Component {
         this.setState({
           title: resData.data.post.title,
           author: resData.data.post.creator.name,
-          image: 'http://' + BASE_URL + '/' + resData.data.post.imageUrl,
+          image: BASE_URL + '/' + resData.data.post.imageUrl,
           date: new Date(resData.data.post.createdAt).toLocaleDateString('en-US'),
           content: resData.data.post.content
         });
